@@ -9,7 +9,7 @@ class AppContainer extends Component {
 		return (
 			<div>
 				<Dropdown inputArr={pokemonList} />
-				<TextInput />
+				<TextInput inputArr={pokemonList} />
 			</div>
 		);
 	}
