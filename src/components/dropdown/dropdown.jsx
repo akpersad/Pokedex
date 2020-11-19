@@ -10,9 +10,11 @@ class Dropdown extends Component {
 	}
 
 	handleDropdownSelect(event) {
+		const { pokemon } = store.getState();
+		pokemon.pokemonChoice = event.currentTarget.value;
 		store.dispatch({
 			type: "UPDATE_CHOICE",
-			payload: { pokemonChoice: event.currentTarget.value }
+			payload: pokemon
 		});
 	}
 
