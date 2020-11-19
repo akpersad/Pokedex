@@ -20,7 +20,7 @@ class Dropdown extends Component {
 		const { inputArr } = this.props;
 		return inputArr.map(item => {
 			return (
-				<option key={item} value={item}>
+				<option key={item} value={item.toLowerCase()}>
 					{item}
 				</option>
 			);

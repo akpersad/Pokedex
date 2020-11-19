@@ -1,5 +1,5 @@
 const initialState = {
-	pokemonChoice: "Bulbasaur"
+	pokemonChoice: "bulbasaur"
 };
 
 const appContainerReducer = (state = initialState, action) => {

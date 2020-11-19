@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { pokemonList } from "../../global/_constants";
 import Dropdown from "../dropdown/dropdown";
@@ -19,7 +18,5 @@ const mapStateToProps = state => {
 		...state.app
 	};
 };
-
-// AppContainer.propTypes = {};
 
 export default connect(mapStateToProps)(AppContainer);
