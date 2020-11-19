@@ -1,0 +1,10 @@
+.text-input_container {
+    position: relative;
+    width: fit-content;
+    .pokemon-selection_container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

@@ -54,6 +54,7 @@ class TextInput extends Component {
 					key={item}
 					value={item}
 					type="button"
+					className="choice-btn"
 					onClick={e => {
 						this.handleButtonClick(e);
 					}}
@@ -67,15 +68,17 @@ class TextInput extends Component {
 	render() {
 		const { pokemonDropdList } = this.props;
 		return (
-			<>
+			<div className="text-input_container">
 				<input
 					className="text-input"
 					type="text"
 					name="pokemon-input"
 					onInput={e => this.displaySearch(e)}
 				/>
-				{pokemonDropdList.length > 0 ? this.renderSelectButtons() : ""}
-			</>
+				<div className="pokemon-selection_container">
+					{pokemonDropdList.length > 0 ? this.renderSelectButtons() : ""}
+				</div>
+			</div>
 		);
 	}
 }
@@ -83,7 +86,6 @@ class TextInput extends Component {
 TextInput.propTypes = {
 	inputArr: PropTypes.array.isRequired,
 	pokemonDropdList: PropTypes.array.isRequired
-	// pokemonChoice: PropTypes.string.isRequired
 };
 
 const mapStateToProps = state => {
