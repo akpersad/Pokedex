@@ -1,3 +1,19 @@
+import axios from "axios";
+
+const getNamesLink = "https://pokeapi.co/api/v2/pokemon?limit=151";
+export const pokeDataLink = "https://pokeapi.co/api/v2/pokemon/";
+
+export const fetchPokemonList = () => {
+	axios.get(getNamesLink).then(res => {
+		if (res.status === 200) {
+			return res.data.results.map(item => {
+				return item.name.charAt(0).toUpperCase() + item.name.slice(1);
+			});
+		}
+		return false;
+	});
+};
+
 export const pokemonList = [
 	"Bulbasaur",
 	"Ivysaur",

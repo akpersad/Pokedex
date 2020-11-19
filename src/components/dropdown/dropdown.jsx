@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../config/store";
+import { fetchData } from "../pokemon/fetchPokemonData";
 
 class Dropdown extends Component {
 	constructor() {
@@ -16,6 +17,7 @@ class Dropdown extends Component {
 			type: "UPDATE_CHOICE",
 			payload: pokemon
 		});
+		fetchData();
 	}
 
 	renderOptions() {
