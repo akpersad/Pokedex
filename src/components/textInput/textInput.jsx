@@ -8,6 +8,20 @@ class TextInput extends Component {
 		super();
 		this.displaySearch = this.displaySearch.bind(this);
 		this.renderSelectButtons = this.renderSelectButtons.bind(this);
+		this.handleButtonClick = this.handleButtonClick.bind(this);
+	}
+
+	handleButtonClick(event) {
+		const { pokemon } = store.getState();
+		pokemon.pokemonChoice = event.currentTarget.value.toLowerCase();
+		pokemon.pokemonDropdList = [];
+
+		document.querySelector(".text-input").value = "";
+
+		store.dispatch({
+			type: "UPDATE_TYPE_LIST",
+			payload: pokemon
+		});
 	}
 
 	displaySearch(event) {
@@ -34,14 +48,32 @@ class TextInput extends Component {
 
 	renderSelectButtons() {
 		const { pokemonDropdList } = this.props;
-		console.log(pokemonDropdList);
+		return pokemonDropdList.map(item => {
+			return (
+				<button
+					key={item}
+					value={item}
+					type="button"
+					onClick={e => {
+						this.handleButtonClick(e);
+					}}
+				>
+					{item}
+				</button>
+			);
+		});
 	}
 
 	render() {
 		const { pokemonDropdList } = this.props;
 		return (
 			<>
-				<input type="text" name="pokemon-input" onInput={e => this.displaySearch(e)} />
+				<input
+					className="text-input"
+					type="text"
+					name="pokemon-input"
+					onInput={e => this.displaySearch(e)}
+				/>
 				{pokemonDropdList.length > 0 ? this.renderSelectButtons() : ""}
 			</>
 		);
