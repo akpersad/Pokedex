@@ -1,3 +1,34 @@
+import axios from "axios";
+import store from "../config/store";
+
+const getNamesLink = "https://pokeapi.co/api/v2/pokemon?limit=151";
+export const getSpeciesInfo = "https://pokeapi.co/api/v2/pokemon-species/";
+export const pokeDataLink = "https://pokeapi.co/api/v2/pokemon/";
+
+export const fetchPokemonList = () => {
+	const { app } = store.getState();
+	axios.get(getNamesLink).then(res => {
+		if (res.status === 200) {
+			const { results } = res.data;
+			const pokeList = results.map(item => {
+				return item.name.charAt(0).toUpperCase() + item.name.slice(1);
+			});
+
+			app.pokeListLoading = false;
+			app.pokeList = pokeList;
+
+			store.dispatch({
+				type: "INITIAL_STATE",
+				payload: app
+			});
+
+			return pokeList;
+		}
+		return false;
+	});
+	return [];
+};
+
 export const pokemonList = [
 	"Bulbasaur",
 	"Ivysaur",
@@ -27,10 +58,10 @@ export const pokemonList = [
 	"Raichu",
 	"Sandshrew",
 	"Sandslash",
-	"Nidoran♀",
+	"Nidoran-m",
 	"Nidorina",
 	"Nidoqueen",
-	"Nidoran♂",
+	"Nidoran-f",
 	"Nidorino",
 	"Nidoking",
 	"Clefairy",

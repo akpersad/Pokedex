@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../config/store";
+import { fetchData } from "../pokemon/fetchPokemonData";
 
 class Dropdown extends Component {
 	constructor() {
@@ -11,11 +12,15 @@ class Dropdown extends Component {
 
 	handleDropdownSelect(event) {
 		const { pokemon } = store.getState();
+		pokemon.pokeLoad = true;
 		pokemon.pokemonChoice = event.currentTarget.value;
+
 		store.dispatch({
-			type: "UPDATE_CHOICE",
+			type: "UPDATE_TYPE_LIST",
 			payload: pokemon
 		});
+
+		fetchData();
 	}
 
 	renderOptions() {

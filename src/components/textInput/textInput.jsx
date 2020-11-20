@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../config/store";
+import { fetchData } from "../pokemon/fetchPokemonData";
 
 class TextInput extends Component {
 	constructor() {
@@ -13,15 +14,17 @@ class TextInput extends Component {
 
 	handleButtonClick(event) {
 		const { pokemon } = store.getState();
+		pokemon.pokeLoad = true;
 		pokemon.pokemonChoice = event.currentTarget.value.toLowerCase();
 		pokemon.pokemonDropdList = [];
-
-		document.querySelector(".text-input").value = "";
 
 		store.dispatch({
 			type: "UPDATE_TYPE_LIST",
 			payload: pokemon
 		});
+
+		document.querySelector(".text-input").value = "";
+		fetchData();
 	}
 
 	displaySearch(event) {
