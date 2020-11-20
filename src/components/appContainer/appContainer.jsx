@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { /* fetchPokemonList */ pokemonList } from "../../global/_constants";
 import Dropdown from "../dropdown/dropdown";
 import TextInput from "../textInput/textInput";
+import PokedexContainer from "../pokedexContainer/pokedexContainer";
 
 class AppContainer extends Component {
 	// constructor() {
@@ -19,10 +20,15 @@ class AppContainer extends Component {
 			// 	{pokeListLoading ? (
 			// 		<Loader type="Oval" color="#00BFFF" height={100} width={100} />
 			// 	) : (
-			<div className="d-flex">
-				<Dropdown inputArr={pokemonList} />
-				<TextInput inputArr={pokemonList} />
-			</div>
+			<>
+				<div className="d-flex">
+					<Dropdown inputArr={pokemonList} />
+					<TextInput inputArr={pokemonList} />
+				</div>
+				<div>
+					<PokedexContainer />
+				</div>
+			</>
 			// 	)}
 			// </>
 		);

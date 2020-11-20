@@ -2,6 +2,7 @@ import axios from "axios";
 import store from "../config/store";
 
 const getNamesLink = "https://pokeapi.co/api/v2/pokemon?limit=151";
+export const getSpeciesInfo = "https://pokeapi.co/api/v2/pokemon-species/";
 export const pokeDataLink = "https://pokeapi.co/api/v2/pokemon/";
 
 export const fetchPokemonList = () => {
@@ -57,10 +58,10 @@ export const pokemonList = [
 	"Raichu",
 	"Sandshrew",
 	"Sandslash",
-	"Nidoran♀",
+	"Nidoran-m",
 	"Nidorina",
 	"Nidoqueen",
-	"Nidoran♂",
+	"Nidoran-f",
 	"Nidorino",
 	"Nidoking",
 	"Clefairy",

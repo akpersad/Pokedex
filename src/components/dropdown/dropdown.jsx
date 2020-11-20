@@ -12,11 +12,14 @@ class Dropdown extends Component {
 
 	handleDropdownSelect(event) {
 		const { pokemon } = store.getState();
+		pokemon.pokeLoad = true;
 		pokemon.pokemonChoice = event.currentTarget.value;
+
 		store.dispatch({
-			type: "UPDATE_CHOICE",
+			type: "UPDATE_TYPE_LIST",
 			payload: pokemon
 		});
+
 		fetchData();
 	}
 
