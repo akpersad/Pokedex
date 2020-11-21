@@ -10,8 +10,13 @@ export const fetchPokemonList = () => {
 	axios.get(getNamesLink).then(res => {
 		if (res.status === 200) {
 			const { results } = res.data;
+			let count = 0;
 			const pokeList = results.map(item => {
-				return item.name.charAt(0).toUpperCase() + item.name.slice(1);
+				const tempHash = {};
+				count += 1;
+				tempHash.name = item.name.charAt(0).toUpperCase() + item.name.slice(1);
+				tempHash.value = count;
+				return tempHash;
 			});
 
 			app.pokeListLoading = false;
