@@ -14,8 +14,10 @@ const initialState = {
 		},
 		pokemonDescription:
 			"A strange seed was planted on its back at birth.The plant sprouts and grows with this POKéMON.",
-		pokemonImage:
-			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+		pokemonImageDefault:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+		pokemonImageShiny:
+			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png"
 	},
 	pokeLoad: false
 };
