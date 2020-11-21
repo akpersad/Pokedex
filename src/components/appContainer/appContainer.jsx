@@ -25,7 +25,7 @@ class AppContainer extends Component {
 					<Dropdown inputArr={pokemonList} />
 					<TextInput inputArr={pokemonList} />
 				</div>
-				<div>
+				<div className="pokedex-container">
 					<PokedexContainer />
 				</div>
 			</>

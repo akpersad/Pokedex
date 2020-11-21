@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
 import store from "../../config/store";
+import PokedexLeftPanel from "../pokedexLeftPanel/pokedexLeftPanel";
+import PokedexRightPanel from "../pokedexRightPanel/pokedexRightPanel";
+import PokedexDivider from "../pokedexDivider/pokedexDivider";
 
 class PokedexContainer extends Component {
 	constructor() {
@@ -25,7 +28,7 @@ class PokedexContainer extends Component {
 				{pokeLoad ? (
 					<Loader type="Oval" color="#00BFFF" height={100} width={100} />
 				) : (
-					<div>
+					<div className="pokedex">
 						<ul>
 							<li>
 								Name:
@@ -74,6 +77,10 @@ class PokedexContainer extends Component {
 								<img src={pokemonInfo.pokemonImageShiny} alt="Pokemon" />
 							</li>
 						</ul>
+
+						<PokedexLeftPanel />
+						<PokedexDivider />
+						<PokedexRightPanel />
 					</div>
 				)}
 			</>
