@@ -54,7 +54,10 @@ class PokedexContainer extends Component {
 								{pokemonInfo.pokemonDescription}
 							</li>
 							<li>
-								<img src={pokemonInfo.pokemonImage} alt="Pokemon" />
+								<img src={pokemonInfo.pokemonImageDefault} alt="Pokemon" />
+							</li>
+							<li>
+								<img src={pokemonInfo.pokemonImageShiny} alt="Pokemon" />
 							</li>
 						</ul>
 					</div>
