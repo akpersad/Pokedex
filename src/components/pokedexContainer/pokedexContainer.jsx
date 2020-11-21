@@ -2,8 +2,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Loader from "react-loader-spinner";
+import store from "../../config/store";
 
 class PokedexContainer extends Component {
+	constructor() {
+		super();
+		if (window.localStorage.pokeHash) {
+			let { pokemon } = store.getState();
+			pokemon = JSON.parse(window.localStorage.pokeHash);
+
+			store.dispatch({
+				type: "INITIAL_LOCAL_CHECK",
+				payload: pokemon
+			});
+		}
+	}
+
 	render() {
 		const { pokemonChoice, pokemonInfo, pokeLoad } = this.props;
 		return (
