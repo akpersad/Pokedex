@@ -24,6 +24,11 @@ const initialState = {
 
 const appContainerReducer = (state = initialState, action) => {
 	switch (action.type) {
+		case "INITIAL_LOCAL_CHECK":
+			return {
+				...action.payload
+			};
+
 		case "UPDATE_CHOICE":
 			return {
 				...action.payload

@@ -30,6 +30,8 @@ export const fetchData = () => {
 						res2.data.flavor_text_entries[0].flavor_text;
 					pokemon.pokeLoad = false;
 
+					window.localStorage.pokeHash = JSON.stringify(pokemon);
+
 					store.dispatch({
 						type: "UPDATE_CHOICE",
 						payload: pokemon
