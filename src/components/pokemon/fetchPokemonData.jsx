@@ -21,7 +21,8 @@ export const fetchData = () => {
 			pokemon.pokemonInfo.pokemonBaseStats.baseSpAttack = data.stats[3].base_stat;
 			pokemon.pokemonInfo.pokemonBaseStats.baseSpDefense = data.stats[4].base_stat;
 			pokemon.pokemonInfo.pokemonBaseStats.baseSpeed = data.stats[5].base_stat;
-			pokemon.pokemonInfo.pokemonImage = data.sprites.front_default;
+			pokemon.pokemonInfo.pokemonImageDefault = data.sprites.front_default;
+			pokemon.pokemonInfo.pokemonImageShiny = data.sprites.front_shiny;
 
 			axios.get(`${getSpeciesInfo}${pokemon.pokemonInfo.pokemonNumber}`).then(res2 => {
 				if (res2.status === 200) {
