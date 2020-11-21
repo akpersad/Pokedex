@@ -1,5 +1,7 @@
 const initialState = {
-	initialText: "Hello World"
+	initialText: "Hello World",
+	pokeListLoading: true,
+	pokeList: []
 };
 
 const appContainerReducer = (state = initialState, action) => {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import store from "../../config/store";
+import { fetchData } from "../pokemon/fetchPokemonData";
 
 class TextInput extends Component {
 	constructor() {
@@ -13,15 +14,18 @@ class TextInput extends Component {
 
 	handleButtonClick(event) {
 		const { pokemon } = store.getState();
-		pokemon.pokemonChoice = event.currentTarget.value.toLowerCase();
+		pokemon.pokeLoad = true;
+		pokemon.pokemonChoice = event.currentTarget.innerHTML;
+		pokemon.pokemonInfo.pokemonNumber = event.currentTarget.value;
 		pokemon.pokemonDropdList = [];
-
-		document.querySelector(".text-input").value = "";
 
 		store.dispatch({
 			type: "UPDATE_TYPE_LIST",
 			payload: pokemon
 		});
+
+		document.querySelector(".text-input").value = "";
+		fetchData();
 	}
 
 	displaySearch(event) {
@@ -29,13 +33,16 @@ class TextInput extends Component {
 		const { pokemon } = store.getState();
 		let counter = 0;
 		const filteredList = inputArr.filter(item => {
+			const tempHash = {};
 			if (
 				event.currentTarget.value &&
-				item.toLowerCase().indexOf(event.currentTarget.value.toLowerCase()) !== -1 &&
+				item.name.toLowerCase().indexOf(event.currentTarget.value.toLowerCase()) !== -1 &&
 				counter < 5
 			) {
 				counter += 1;
-				return item;
+				tempHash.name = item.name;
+				tempHash.value = item.value;
+				return tempHash;
 			}
 			return false;
 		});
@@ -51,15 +58,15 @@ class TextInput extends Component {
 		return pokemonDropdList.map(item => {
 			return (
 				<button
-					key={item}
-					value={item}
+					key={item.value}
+					value={item.value}
 					type="button"
 					className="choice-btn"
 					onClick={e => {
 						this.handleButtonClick(e);
 					}}
 				>
-					{item}
+					{item.name}
 				</button>
 			);
 		});
