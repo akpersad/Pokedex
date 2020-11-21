@@ -4,7 +4,7 @@ import { pokeDataLink, getSpeciesInfo } from "../../global/_constants";
 
 export const fetchData = () => {
 	const { pokemon } = store.getState();
-	axios.get(`${pokeDataLink}${pokemon.pokemonChoice}`).then(res => {
+	axios.get(`${pokeDataLink}${pokemon.pokemonInfo.pokemonNumber}`).then(res => {
 		if (res.status === 200) {
 			const { data } = res;
 			pokemon.pokemonChoice = data.species.name;

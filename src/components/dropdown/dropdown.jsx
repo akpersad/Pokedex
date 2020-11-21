@@ -13,7 +13,8 @@ class Dropdown extends Component {
 	handleDropdownSelect(event) {
 		const { pokemon } = store.getState();
 		pokemon.pokeLoad = true;
-		pokemon.pokemonChoice = event.currentTarget.value;
+		pokemon.pokemonInfo.pokemonNumber = event.currentTarget.value;
+		pokemon.pokemonChoice = event.currentTarget[event.currentTarget.selectedIndex].innerHTML;
 
 		store.dispatch({
 			type: "UPDATE_TYPE_LIST",
@@ -27,20 +28,20 @@ class Dropdown extends Component {
 		const { inputArr } = this.props;
 		return inputArr.map(item => {
 			return (
-				<option key={item} value={item.toLowerCase()}>
-					{item}
+				<option key={item.value} value={item.value}>
+					{item.name}
 				</option>
 			);
 		});
 	}
 
 	render() {
-		const { pokemonChoice } = this.props;
+		const { pokemonInfo } = this.props;
 		return (
 			<>
 				<select
 					className="select-option"
-					value={pokemonChoice}
+					value={pokemonInfo.pokemonNumber}
 					onChange={e => {
 						this.handleDropdownSelect(e);
 					}}
@@ -54,7 +55,7 @@ class Dropdown extends Component {
 
 Dropdown.propTypes = {
 	inputArr: PropTypes.array.isRequired,
-	pokemonChoice: PropTypes.string.isRequired
+	pokemonInfo: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => {
