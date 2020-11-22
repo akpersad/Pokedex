@@ -11,7 +11,7 @@ body {
     border-radius: 15px;
     border: double black 10px;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     min-height: 550px;
     .panel {
         width: 359px;
@@ -20,16 +20,26 @@ body {
         border-radius: 3px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         &.left-panel {
-            .pokemon-name {
-                font-size: 28px;
-                letter-spacing: 4px;
-                text-transform: capitalize;
-                height: 45px;
-                box-sizing: border-box;
-                .name-no {
-                    float: right;
-                    text-transform: lowercase;
+            .screen {
+                background: linear-gradient(14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+                padding: 5px;
+                border-radius: 3px;
+                font-family: "PixelFont";
+                border: inset #879a65 3px;
+                &.pokemon-name {
+                    font-size: 28px;
+                    letter-spacing: 4px;
+                    text-transform: capitalize;
+                    height: 45px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                &.pokemon-search {
+                    display: flex;
                 }
             }
             .sprite-container {
@@ -72,7 +82,7 @@ body {
                     );
                     padding: 5px;
                     border-radius: 3px;
-                    font-family: "VT323";
+                    font-family: "PixelFont";
                     border: inset #879a65 3px;
                     &.stats {
                         width: 150px;

@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import LeftHeader from "../leftHeader/leftHeader";
+import LeftSprite from "../leftSprite/leftSprite";
+import LeftSearch from "../leftSearch/leftSearch";
 
 class PokedexLeftPanel extends Component {
 	render() {
-		return <div>PokedexLeftPanel</div>;
+		return (
+			<div className="panel left-panel">
+				<LeftHeader />
+				<LeftSprite />
+				<LeftSearch />
+			</div>
+		);
 	}
 }
-
-PokedexLeftPanel.propTypes = {};
 
 export default PokedexLeftPanel;

@@ -80,6 +80,7 @@ class TextInput extends Component {
 					className="text-input"
 					type="text"
 					name="pokemon-input"
+					placeholder="Type Pokemon Name"
 					onInput={e => this.displaySearch(e)}
 				/>
 				<div className="pokemon-selection_container">
