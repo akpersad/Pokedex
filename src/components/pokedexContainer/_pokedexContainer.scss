@@ -23,11 +23,12 @@ body {
         justify-content: space-between;
         &.left-panel {
             .screen {
-                background: linear-gradient(14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+                background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
+                padding: 5px;
                 padding: 5px;
                 border-radius: 3px;
                 font-family: "PixelFont";
-                border: inset #879a65 3px;
+                border: inset #60d5f8 3px;
                 &.pokemon-name {
                     font-size: 28px;
                     letter-spacing: 4px;
@@ -75,15 +76,11 @@ body {
                     border-bottom: none;
                 }
                 .screen {
-                    background: linear-gradient(
-                        14deg,
-                        rgb(165, 205, 83) 60%,
-                        rgb(193, 217, 144) 65%
-                    );
+                    background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
                     padding: 5px;
                     border-radius: 3px;
                     font-family: "PixelFont";
-                    border: inset #879a65 3px;
+                    border: inset #60d5f8 3px;
                     &.stats {
                         width: 150px;
                         display: flex;
@@ -132,8 +129,8 @@ body {
                         .type {
                             color: rgba(255, 255, 255, 1);
                             text-transform: capitalize;
-                            font-size: 1.25em;
-                            padding: 2px;
+                            font-size: 1em;
+                            padding: 2px 2px 2px 30px;
                             margin: 2px;
                             border: groove #757575 3px;
                             border-radius: 10px;
@@ -180,6 +177,7 @@ body {
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Ghost.png");
                             }
                             &.grass {
+                                color: #000;
                                 background-color: #89c71f;
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Grass.png");
                             }
@@ -188,10 +186,12 @@ body {
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Ground.png");
                             }
                             &.ice {
+                                color: #000;
                                 background-color: #a4d6d8;
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Ice.png");
                             }
                             &.normal {
+                                color: #000;
                                 background-color: #a8a87b;
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Normal.png");
                             }
@@ -212,6 +212,7 @@ body {
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Steel.png");
                             }
                             &.water {
+                                color: #000;
                                 background-color: #6e8dec;
                                 background-image: url("https://pokedex-persad.s3.amazonaws.com/Water.png");
                             }
