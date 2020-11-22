@@ -18,7 +18,7 @@ class Types extends Component {
 
 	render() {
 		return (
-			<div className="type-list">
+			<div className="screen type-list">
 				<div className="panel-header">Types</div>
 				<div className="type-box">{this.renderTypeList()}</div>
 			</div>
