@@ -4,11 +4,19 @@ import { connect } from "react-redux";
 
 class RightDescription extends Component {
 	render() {
-		return <div>RightDescription</div>;
+		const { pokemonInfo } = this.props;
+
+		return (
+			<div className="panel-row pokemon-description screen">
+				<span>{pokemonInfo.pokemonDescription}</span>
+			</div>
+		);
 	}
 }
 
-RightDescription.propTypes = {};
+RightDescription.propTypes = {
+	pokemonInfo: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => {
 	return {
