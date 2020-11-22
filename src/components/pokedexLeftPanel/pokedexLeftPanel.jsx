@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class PokedexLeftPanel extends Component {
 	render() {
-		return <div>PokedexLeftPanel</div>;
+		return <div className="panel left-panel">PokedexLeftPanel</div>;
 	}
 }
-
-PokedexLeftPanel.propTypes = {};
 
 export default PokedexLeftPanel;
