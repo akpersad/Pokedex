@@ -1,6 +1,10 @@
 .text-input_container {
     position: relative;
-    width: fit-content;
+    width: 50%;
+    padding-left: 5px;
+    .text-input {
+        width: 100%;
+    }
     .pokemon-selection_container {
         position: absolute;
         display: flex;
