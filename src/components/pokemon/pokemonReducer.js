@@ -19,7 +19,8 @@ const initialState = {
 		pokemonImageShiny:
 			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png"
 	},
-	pokeLoad: false
+	pokeLoad: false,
+	showShiny: false
 };
 
 const appContainerReducer = (state = initialState, action) => {
