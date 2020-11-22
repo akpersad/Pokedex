@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class PokedexDivider extends Component {
 	render() {
-		return <div>PokedexDivider</div>;
+		return (
+			<div className="divider">
+				<div className="gap" />
+				<div className="hinge" />
+				<div className="gap" />
+				<div className="hinge" />
+				<div className="gap" />
+			</div>
+		);
 	}
 }
-
-PokedexDivider.propTypes = {};
 
 export default PokedexDivider;

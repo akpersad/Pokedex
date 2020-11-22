@@ -11,6 +11,8 @@ body {
     border-radius: 15px;
     border: double black 10px;
     display: flex;
+    justify-content: center;
+    min-height: 550px;
     .panel {
         width: 359px;
         padding: 10px;
