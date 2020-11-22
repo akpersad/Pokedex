@@ -1,0 +1,78 @@
+.directional-container {
+    display: grid;
+    grid-template-columns: 40px 40px 40px;
+    grid-template-rows: 40px 40px 40px;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". btn-up ."
+        "btn-left empty btn-right"
+        ". btn-down .";
+    .btn-up {
+        grid-area: btn-up;
+        .btn-control {
+            -webkit-box-shadow: 13px 12px 15px -5px rgba(0, 0, 0, 0.46);
+            box-shadow: 13px 12px 15px -5px rgba(0, 0, 0, 0.46);
+        }
+    }
+
+    .btn-left {
+        grid-area: btn-left;
+        .btn-control {
+            -webkit-box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+            box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+        }
+    }
+
+    .btn-right {
+        grid-area: btn-right;
+        .btn-control {
+            -webkit-box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+            box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+        }
+    }
+
+    .btn-down {
+        grid-area: btn-down;
+        .btn-control {
+            -webkit-box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+            box-shadow: 8px 16px 15px -5px rgba(0, 0, 0, 0.46);
+        }
+    }
+
+    .empty {
+        grid-area: empty;
+        height: 40px;
+        width: 40px;
+        background-color: #000;
+    }
+
+    .btn-control {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        background-color: #000;
+        outline: none;
+        border: 1px solid transparent;
+
+        &:active {
+            -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+            -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+            box-shadow: inset 0px 0px 5px #c1c1c1;
+            outline: none;
+        }
+
+        span {
+            height: 40px;
+            width: 40px;
+            .arrow-left {
+                height: 40px;
+                padding-right: 5px;
+            }
+            .arrow-right {
+                height: 40px;
+                padding-left: 5px;
+            }
+        }
+    }
+}
