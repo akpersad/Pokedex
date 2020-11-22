@@ -11,7 +11,6 @@ body {
     border-radius: 15px;
     border: double black 10px;
     display: flex;
-    // justify-content: center;
     min-height: 550px;
     .panel {
         width: 359px;
@@ -220,11 +219,18 @@ body {
                     }
                 }
                 &.pokemon-description {
-                    font-size: 18px;
+                    font-size: 22px;
                     letter-spacing: 0;
                     min-height: 115px;
                     box-sizing: border-box;
                     flex: 1;
+                    &.screen {
+                        background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
+                        padding: 5px;
+                        border-radius: 3px;
+                        font-family: "PixelFont";
+                        border: inset #60d5f8 3px;
+                    }
                 }
                 &.controls {
                     display: flex;
