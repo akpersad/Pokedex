@@ -9,7 +9,7 @@ class LeftHeader extends Component {
 			<div className="pokemon-name screen">
 				{pokemonChoice}
 				<span className="name-no">
-					no.
+					No.
 					{pokemonInfo.pokemonNumber}
 				</span>
 			</div>
