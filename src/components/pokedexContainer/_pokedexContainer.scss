@@ -88,12 +88,21 @@ body {
                         width: 150px;
                         display: flex;
                         flex-wrap: wrap;
+                        flex-direction: column;
                         justify-content: center;
                         margin: 5px;
                         flex: 1;
                         .stat-line {
                             font-size: 17px;
                             text-transform: capitalize;
+                            display: flex;
+                            .dot-line {
+                                flex: 0.9;
+                                border-bottom: 3px dotted black;
+                                height: 15px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
                         }
                     }
                 }
