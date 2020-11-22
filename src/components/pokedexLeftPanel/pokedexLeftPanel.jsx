@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import LeftHeader from "../leftHeader/leftHeader";
 
 class PokedexLeftPanel extends Component {
 	render() {
-		return <div>PokedexLeftPanel</div>;
+		return (
+			<div className="panel left-panel">
+				<LeftHeader />
+			</div>
+		);
 	}
 }
-
-PokedexLeftPanel.propTypes = {};
 
 export default PokedexLeftPanel;
