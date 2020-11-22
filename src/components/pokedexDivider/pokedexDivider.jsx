@@ -1,12 +1,21 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class PokedexDivider extends Component {
+	renderDividerSection() {
+		const gapCount = 3;
+		const dividerHTML = [];
+		for (let i = 0; i < gapCount; i++) {
+			const tempGapHTML = <div className="gap" />;
+			const tempHingeHTML = gapCount - i - 1 > 0 ? <div className="hinge" /> : "";
+			dividerHTML.push(tempGapHTML);
+			dividerHTML.push(tempHingeHTML);
+		}
+		return dividerHTML;
+	}
+
 	render() {
-		return <div>PokedexDivider</div>;
+		return <div className="divider">{this.renderDividerSection()}</div>;
 	}
 }
-
-PokedexDivider.propTypes = {};
 
 export default PokedexDivider;
