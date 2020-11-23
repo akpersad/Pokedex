@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 
 class LeftSprite extends Component {
 	render() {
-		const { pokemonInfo, showShiny } = this.props;
+		const { pokemonInfo, showShiny, pokeLoad } = this.props;
 		const imgUrl = showShiny ? pokemonInfo.pokemonImageShiny : pokemonInfo.pokemonImageDefault;
 		return (
 			<div className="sprite-container">
-				<img src={imgUrl} alt="Pokemon Sprite" className="pokemon-sprite" />
+				{pokeLoad ? (
+					<Loader type="Oval" color="#42cc28" height={300} width={300} />
+				) : (
+					<img src={imgUrl} alt="Pokemon Sprite" className="pokemon-sprite" />
+				)}
 			</div>
 		);
 	}
@@ -16,7 +21,8 @@ class LeftSprite extends Component {
 
 LeftSprite.propTypes = {
 	pokemonInfo: PropTypes.object.isRequired,
-	showShiny: PropTypes.bool.isRequired
+	showShiny: PropTypes.bool.isRequired,
+	pokeLoad: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = state => {

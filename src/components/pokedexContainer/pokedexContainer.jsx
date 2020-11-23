@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import Loader from "react-loader-spinner";
 import store from "../../config/store";
 import PokedexLeftPanel from "../pokedexLeftPanel/pokedexLeftPanel";
 import PokedexRightPanel from "../pokedexRightPanel/pokedexRightPanel";
@@ -22,26 +20,15 @@ class PokedexContainer extends Component {
 	}
 
 	render() {
-		const { pokeLoad } = this.props;
 		return (
-			<>
-				{pokeLoad ? (
-					<Loader type="Oval" color="#00BFFF" height={100} width={100} />
-				) : (
-					<div className="pokedex">
-						<PokedexLeftPanel />
-						<PokedexDivider />
-						<PokedexRightPanel />
-					</div>
-				)}
-			</>
+			<div className="pokedex">
+				<PokedexLeftPanel />
+				<PokedexDivider />
+				<PokedexRightPanel />
+			</div>
 		);
 	}
 }
-
-PokedexContainer.propTypes = {
-	pokeLoad: PropTypes.bool.isRequired
-};
 
 const mapStateToProps = state => {
 	return {
