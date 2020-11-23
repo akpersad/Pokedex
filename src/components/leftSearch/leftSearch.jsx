@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { /* fetchPokemonList */ pokemonList } from "../../global/_constants";
 import Dropdown from "../dropdown/dropdown";
 import TextInput from "../textInput/textInput";
@@ -15,6 +15,6 @@ class LeftSearch extends Component {
 	}
 }
 
-LeftSearch.propTypes = {};
+// LeftSearch.propTypes = {};
 
 export default LeftSearch;
