@@ -233,55 +233,55 @@ body {
                         border: inset #60d5f8 3px;
                     }
                 }
-                &.controls {
-                    display: flex;
-                    justify-content: space-around;
-                    padding: 15px;
-                    .button {
-                        padding: 5px;
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                        border: outset rgb(248, 187, 187) 6px;
-                        transform: rotate(60deg);
+
+                .rand-button {
+                    padding: 5px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: outset rgb(248, 187, 187) 6px;
+                    transform: rotate(60deg);
+                    background: radial-gradient(
+                        circle farthest-corner at 40% 25%,
+                        rgb(218, 237, 241) 9%,
+                        rgb(124, 214, 237) 20%,
+                        rgb(64, 90, 165) 62%,
+                        rgb(43, 125, 196) 100%
+                    );
+                    cursor: pointer;
+                    &:hover {
                         background: radial-gradient(
                             circle farthest-corner at 40% 25%,
-                            rgb(218, 237, 241) 9%,
-                            rgb(124, 214, 237) 20%,
-                            rgb(64, 90, 165) 62%,
-                            rgb(43, 125, 196) 100%
+                            rgb(233, 241, 218) 9%,
+                            rgb(184, 237, 124) 20%,
+                            rgb(64, 165, 106) 62%,
+                            rgb(43, 196, 145) 100%
                         );
-                        cursor: pointer;
-                        &::hover {
-                            background: radial-gradient(
-                                circle farthest-corner at 40% 25%,
-                                rgb(233, 241, 218) 9%,
-                                rgb(184, 237, 124) 20%,
-                                rgb(64, 165, 106) 62%,
-                                rgb(43, 196, 145) 100%
-                            );
-                        }
-                        &::active {
-                            background: radial-gradient(
-                                circle farthest-corner at 40% 25%,
-                                rgb(229, 255, 181) 9%,
-                                rgb(204, 237, 124) 20%,
-                                rgb(103, 165, 64) 62%,
-                                rgb(66, 204, 40) 100%
-                            );
-                        }
-                        &::after {
-                            border: groove #460f0f 5px;
-                            content: "";
-                            width: 60px;
-                            height: 60px;
-                            position: absolute;
-                            border-radius: 50%;
-                            left: -10px;
-                            top: -10px;
-                            border-style: double;
-                            opacity: 0.75;
-                        }
+                    }
+                    &:active {
+                        background: radial-gradient(
+                            circle farthest-corner at 40% 25%,
+                            rgb(229, 255, 181) 9%,
+                            rgb(204, 237, 124) 20%,
+                            rgb(103, 165, 64) 62%,
+                            rgb(66, 204, 40) 100%
+                        );
+                        outline: none;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    &::after {
+                        border: groove #460f0f 5px;
+                        content: "";
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        border-radius: 50%;
+                        left: -6px;
+                        top: -6px;
+                        border-style: double;
+                        opacity: 0.75;
                     }
                 }
             }

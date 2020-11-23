@@ -5,7 +5,7 @@ import ArrowRight from "../../global/assets/images/arrow-right.svg";
 import ArrowDown from "../../global/assets/images/arrow-down.svg";
 import ArrowLeft from "../../global/assets/images/arrow-left.svg";
 import { fetchData } from "../pokemon/fetchPokemonData";
-import { pokemonNumer } from "../../global/_constants";
+import { pokemonNumber } from "../../global/_constants";
 
 class DirectionalPad extends Component {
 	handleBtnClick(event) {
@@ -34,7 +34,7 @@ class DirectionalPad extends Component {
 				break;
 		}
 
-		if (counter > 0 && counter < pokemonNumer + 1) {
+		if (counter > 0 && counter <= pokemonNumber) {
 			pokemon.pokeLoad = true;
 
 			store.dispatch({
