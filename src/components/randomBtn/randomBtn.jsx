@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 
 class RandomBtn extends Component {
 	render() {
-		return <div>RandomBtn</div>;
+		return (
+			<button type="button" className="rand-button">
+				<span />
+			</button>
+		);
 	}
 }
 

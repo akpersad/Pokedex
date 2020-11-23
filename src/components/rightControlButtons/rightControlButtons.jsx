@@ -6,7 +6,7 @@ import RandomBtn from "../randomBtn/randomBtn";
 class RightControlButtons extends Component {
 	render() {
 		return (
-			<div className="control-btn_container">
+			<div className="panel-row control-btn_container">
 				<DirectionalPad />
 				<ShinySelect />
 				<RandomBtn />
