@@ -82,6 +82,7 @@ class TextInput extends Component {
 					name="pokemon-input"
 					placeholder="Type Pokemon Name"
 					onInput={e => this.displaySearch(e)}
+					autoComplete="off"
 				/>
 				<div className="pokemon-selection_container">
 					{pokemonDropdList.length > 0 ? this.renderSelectButtons() : ""}

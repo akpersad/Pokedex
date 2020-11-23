@@ -26,8 +26,14 @@ export const fetchData = () => {
 
 			axios.get(`${getSpeciesInfo}${pokemon.pokemonInfo.pokemonNumber}`).then(res2 => {
 				if (res2.status === 200) {
-					pokemon.pokemonInfo.pokemonDescription =
-						res2.data.flavor_text_entries[0].flavor_text;
+					const desc = res2.data.flavor_text_entries.filter(item => {
+						if (item.language.name === "en") {
+							return item.flavor_text;
+						}
+						return "";
+					});
+
+					pokemon.pokemonInfo.pokemonDescription = desc[0].flavor_text;
 					pokemon.pokeLoad = false;
 
 					window.localStorage.pokeHash = JSON.stringify(pokemon);
