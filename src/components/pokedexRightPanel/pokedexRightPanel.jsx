@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import StatsAndTypes from "../rightStatsAndTypes/rightStatsAndTypes";
 import Description from "../rightDescription/rightDescription";
+import ControlButtons from "../rightControlButtons/rightControlButtons";
 
 class PokedexRightPanel extends Component {
 	render() {
@@ -8,6 +9,7 @@ class PokedexRightPanel extends Component {
 			<div className="panel right-panel">
 				<StatsAndTypes />
 				<Description />
+				<ControlButtons />
 			</div>
 		);
 	}
