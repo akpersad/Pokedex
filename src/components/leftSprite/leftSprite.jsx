@@ -10,7 +10,7 @@ class LeftSprite extends Component {
 		return (
 			<div className="sprite-container">
 				{pokeLoad ? (
-					<Loader type="Oval" color="#00BFFF" height={300} width={300} />
+					<Loader type="Oval" color="#42cc28" height={300} width={300} />
 				) : (
 					<img src={imgUrl} alt="Pokemon Sprite" className="pokemon-sprite" />
 				)}

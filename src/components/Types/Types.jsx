@@ -23,7 +23,7 @@ class Types extends Component {
 			<div className="screen type-list">
 				<div className="panel-header">Types</div>
 				{pokeLoad ? (
-					<Loader type="Oval" color="#00BFFF" height={150} width={150} />
+					<Loader type="Oval" color="#42cc28" height={150} width={150} />
 				) : (
 					<div className="type-box">{this.renderTypeList()}</div>
 				)}

@@ -11,7 +11,7 @@ class Stats extends Component {
 			<div className="screen stats">
 				<div className="stat-line">Base Stats</div>
 				{pokeLoad ? (
-					<Loader type="Oval" color="#00BFFF" height={156} width={156} />
+					<Loader type="Oval" color="#42cc28" height={156} width={156} />
 				) : (
 					<div className="stat-container">
 						<div className="stat-line hp-line">

@@ -9,7 +9,7 @@ class LeftHeader extends Component {
 		return (
 			<div className="pokemon-name screen">
 				{pokeLoad ? (
-					<Loader type="Oval" color="#00BFFF" height={40} width={40} />
+					<Loader type="Oval" color="#42cc28" height={40} width={40} />
 				) : (
 					pokemonChoice
 				)}
@@ -17,7 +17,7 @@ class LeftHeader extends Component {
 					<span className="name-no">
 						No.
 						{pokeLoad ? (
-							<Loader type="Oval" color="#00BFFF" height={30} width={30} />
+							<Loader type="Oval" color="#42cc28" height={30} width={30} />
 						) : (
 							pokemonInfo.pokemonNumber
 						)}
