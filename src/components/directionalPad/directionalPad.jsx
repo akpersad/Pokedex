@@ -34,7 +34,7 @@ class DirectionalPad extends Component {
 				break;
 		}
 
-		if (counter > 0 && counter < pokemonNumber + 1) {
+		if (counter > 0 && counter <= pokemonNumber) {
 			pokemon.pokeLoad = true;
 
 			store.dispatch({
