@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DirectionalPad from "../directionalPad/directionalPad";
 import ShinySelect from "../shinySelect/shinySelect";
+import RandomBtn from "../randomBtn/randomBtn";
 
 class RightControlButtons extends Component {
 	render() {
@@ -8,6 +9,7 @@ class RightControlButtons extends Component {
 			<div className="control-btn_container">
 				<DirectionalPad />
 				<ShinySelect />
+				<RandomBtn />
 			</div>
 		);
 	}
