@@ -1,24 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 
-// Globals
-@import "./partials/mixins";
-@import "./partials/colors";
-@import "./partials/breakpoints";
-@import "./partials/spacing";
-@import "./partials/grid-layout";
-@import "./partials/alignment";
-@import "./partials/shared-styles";
-@import "./partials/typography";
-@import "./partials/icons";
-@import "./partials/common-variables";
-@import "./partials/buttons";
-@import "./partials/forms";
-@import "./partials/z-index";
-@import "./partials/visibility";
-@import "./partials/accessibility";
-@import "./partials/imported";
-
 #root {
-    font-family: $OpenSans;
     position: relative;
 }
+
+@import "../components/textInput/textInput";
+@import "../components/dropdown/dropdown";
+@import "../components/appContainer/appContainer";
+@import "../components/pokedexContainer/pokedexContainer";
+@import "../components/leftHeader/leftHeader";
+@import "../components/pokedexLeftPanel/pokedexLeftPanel";
+@import "../components/Types/Types";
+@import "../components/pokedexDivider/pokedexDivider";
+@import "../components/pokedexRightPanel/pokedexRightPanel";
+@import "../components/rightControlButtons/rightControlButtons";
+@import "../components/directionalPad/directionalPad";
+@import "../components/shinySelect/shinySelect";
+@import "../components/randomBtn/randomBtn";
