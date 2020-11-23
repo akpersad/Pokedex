@@ -40,6 +40,11 @@ const appContainerReducer = (state = initialState, action) => {
 				...action.payload
 			};
 
+		case "START_LOAD":
+			return {
+				...action.payload
+			};
+
 		default:
 			return state;
 	}

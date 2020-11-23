@@ -1,12 +1,18 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+import StatsAndTypes from "../rightStatsAndTypes/rightStatsAndTypes";
+import Description from "../rightDescription/rightDescription";
+import ControlButtons from "../rightControlButtons/rightControlButtons";
 
 class PokedexRightPanel extends Component {
 	render() {
-		return <div>PokedexRightPanel</div>;
+		return (
+			<div className="panel right-panel">
+				<StatsAndTypes />
+				<Description />
+				<ControlButtons />
+			</div>
+		);
 	}
 }
-
-PokedexRightPanel.propTypes = {};
 
 export default PokedexRightPanel;

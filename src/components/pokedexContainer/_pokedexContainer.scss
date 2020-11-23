@@ -11,7 +11,6 @@ body {
     border-radius: 15px;
     border: double black 10px;
     display: flex;
-    // justify-content: center;
     min-height: 550px;
     .panel {
         width: 359px;
@@ -23,11 +22,12 @@ body {
         justify-content: space-between;
         &.left-panel {
             .screen {
-                background: linear-gradient(14deg, rgb(165, 205, 83) 60%, rgb(193, 217, 144) 65%);
+                background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
+                padding: 5px;
                 padding: 5px;
                 border-radius: 3px;
                 font-family: "PixelFont";
-                border: inset #879a65 3px;
+                border: inset #60d5f8 3px;
                 &.pokemon-name {
                     font-size: 28px;
                     letter-spacing: 4px;
@@ -75,25 +75,31 @@ body {
                     border-bottom: none;
                 }
                 .screen {
-                    background: linear-gradient(
-                        14deg,
-                        rgb(165, 205, 83) 60%,
-                        rgb(193, 217, 144) 65%
-                    );
+                    background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
                     padding: 5px;
                     border-radius: 3px;
                     font-family: "PixelFont";
-                    border: inset #879a65 3px;
+                    border: inset #60d5f8 3px;
                     &.stats {
                         width: 150px;
                         display: flex;
                         flex-wrap: wrap;
+                        flex-direction: column;
                         justify-content: center;
                         margin: 5px;
                         flex: 1;
                         .stat-line {
-                            font-size: 17px;
+                            font-size: 18px;
+                            font-weight: 700;
                             text-transform: capitalize;
+                            display: flex;
+                            .dot-line {
+                                flex: 0.9;
+                                border-bottom: 3px dotted black;
+                                height: 15px;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
                         }
                     }
                 }
@@ -102,177 +108,180 @@ body {
                     flex-direction: column;
                     border-left: groove #757575 3px;
                     flex: 1;
+                    width: 150px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 5px;
+                    flex: 1;
                     .panel-header {
+                        font-size: 18px;
+                        font-weight: 700;
                         text-transform: capitalize;
-                        font-size: 1.25em;
-                        padding: 5px;
-                        font-family: "Staatliches", cursive;
-                        letter-spacing: 2px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background: linear-gradient(
-                            14deg,
-                            #460f0f 0,
-                            #891313 30%,
-                            #b31818 45%,
-                            #fd5555 65%,
-                            #b31818 95%
-                        );
-                        border: groove #e61515 3px;
-                        border-width: 3px 2px;
-                        text-shadow: #fd5555 -1px 1px;
+                        font-family: "PixelFont";
                     }
                     .type-box {
                         display: flex;
                         flex-direction: column;
                         flex: 1;
-                        justify-content: space-evenly;
-                        background: linear-gradient(14deg, #afafaf 50%, #ffffff 80%, #afafaf 90%);
-                        border-top: groove #757575 3px;
+                        padding-top: 20px;
+                        // border-top: groove #757575 3px;
                         .type {
-                            color: rgba(0, 0, 0, 0.9);
+                            color: rgba(255, 255, 255, 1);
                             text-transform: capitalize;
-                            font-size: 1.25em;
-                            padding: 2px;
+                            font-size: 1em;
+                            padding: 2px 2px 2px 30px;
                             margin: 2px;
                             border: groove #757575 3px;
                             border-radius: 10px;
                             width: 150px;
-                            font-family: "Staatliches", cursive;
+                            font-family: "PixelFont";
                             text-align: center;
                             letter-spacing: 2px;
-                            text-shadow: rgba(255, 255, 255, 0.3) -1px 1px;
-                            align-self: center;
-                            background: linear-gradient(
-                                15deg,
-                                rgba(128, 128, 128, 0.5) 64%,
-                                rgba(138, 138, 138, 0.5) 70%,
-                                rgba(230, 230, 230, 0.5) 81%,
-                                rgba(255, 255, 255, 0.5) 86%,
-                                rgba(220, 220, 220, 0.5) 89%,
-                                rgba(230, 230, 230, 0.5) 100%
-                            );
-                            background-blend-mode: hard-light;
-                            &.normal {
-                                background-color: #bfbfbf;
-                            }
-                            &.fighting {
-                                background-color: #d87c58;
-                            }
-                            &.flying {
-                                background-color: #999ade;
-                            }
-                            &.poison {
-                                background-color: #925192;
-                            }
-                            &.ground {
-                                background-color: #dea761;
-                            }
-                            &.rock {
-                                background-color: #897864;
-                            }
+                            background-size: contain;
+                            background-repeat: no-repeat;
                             &.bug {
-                                background-color: #b1c967;
-                            }
-                            &.ghost {
-                                background-color: #c195dc;
-                            }
-                            &.steel {
-                                background-color: #49769c;
-                            }
-                            &.fire {
-                                background-color: #cf1414;
-                            }
-                            &.water {
-                                background-color: #1689de;
-                            }
-                            &.grass {
-                                background-color: #47a047;
-                            }
-                            &.electric {
-                                background-color: #e6b700;
-                            }
-                            &.psychic {
-                                background-color: #fa43b8;
-                            }
-                            &.ice {
-                                background-color: #98c3de;
-                            }
-                            &.dragon {
-                                background-color: #89315d;
+                                background-color: #abb839;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Bug.png");
                             }
                             &.dark {
-                                background-color: #282433;
+                                background-color: #6d5949;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Dark.png");
+                            }
+                            &.dragon {
+                                background-color: #693ff3;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Dragon.png");
+                            }
+                            &.electric {
+                                background-color: #e2c542;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Electric.png");
                             }
                             &.fairy {
-                                background-color: #dca0ce;
+                                background-color: #f5b0c8;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Fairy.png");
                             }
-                            &.unknown {
-                                background-color: #545454;
+                            &.fighting {
+                                background-color: #a93d2c;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Fighting.png");
                             }
-                            &.shadow {
-                                background-color: #364163;
+                            &.fire {
+                                background-color: #e3853b;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Fire.png");
+                            }
+                            &.flying {
+                                background-color: #a58fec;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Flying.png");
+                            }
+                            &.ghost {
+                                background-color: #6c5896;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Ghost.png");
+                            }
+                            &.grass {
+                                color: #000;
+                                background-color: #89c71f;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Grass.png");
+                            }
+                            &.ground {
+                                color: #000;
+                                background-color: #dcc16f;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Ground.png");
+                            }
+                            &.ice {
+                                color: #000;
+                                background-color: #a4d6d8;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Ice.png");
+                            }
+                            &.normal {
+                                color: #000;
+                                background-color: #a8a87b;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Normal.png");
+                            }
+                            &.poison {
+                                background-color: #96459d;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Poison.png");
+                            }
+                            &.psychic {
+                                background-color: #e86187;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Psychic.png");
+                            }
+                            &.rock {
+                                background-color: #b5a144;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Rock.png");
+                            }
+                            &.steel {
+                                background-color: #b8b8ce;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Steel.png");
+                            }
+                            &.water {
+                                color: #000;
+                                background-color: #6e8dec;
+                                background-image: url("https://pokedex-persad.s3.amazonaws.com/Water.png");
                             }
                         }
                     }
                 }
                 &.pokemon-description {
-                    font-size: 18px;
+                    font-size: 22px;
                     letter-spacing: 0;
                     min-height: 115px;
                     box-sizing: border-box;
                     flex: 1;
-                }
-                &.controls {
-                    display: flex;
-                    justify-content: space-around;
-                    padding: 15px;
-                    .button {
+                    &.screen {
+                        background: linear-gradient(14deg, #60d5f8 60%, #69e2fa 65%);
                         padding: 5px;
-                        width: 40px;
-                        height: 40px;
-                        border-radius: 50%;
-                        border: outset rgb(248, 187, 187) 6px;
-                        transform: rotate(60deg);
+                        border-radius: 3px;
+                        font-family: "PixelFont";
+                        border: inset #60d5f8 3px;
+                    }
+                }
+
+                .rand-button {
+                    padding: 5px;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    border: outset rgb(248, 187, 187) 6px;
+                    transform: rotate(60deg);
+                    background: radial-gradient(
+                        circle farthest-corner at 40% 25%,
+                        rgb(218, 237, 241) 9%,
+                        rgb(124, 214, 237) 20%,
+                        rgb(64, 90, 165) 62%,
+                        rgb(43, 125, 196) 100%
+                    );
+                    cursor: pointer;
+                    &:hover {
                         background: radial-gradient(
                             circle farthest-corner at 40% 25%,
-                            rgb(218, 237, 241) 9%,
-                            rgb(124, 214, 237) 20%,
-                            rgb(64, 90, 165) 62%,
-                            rgb(43, 125, 196) 100%
+                            rgb(233, 241, 218) 9%,
+                            rgb(184, 237, 124) 20%,
+                            rgb(64, 165, 106) 62%,
+                            rgb(43, 196, 145) 100%
                         );
-                        cursor: pointer;
-                        &::hover {
-                            background: radial-gradient(
-                                circle farthest-corner at 40% 25%,
-                                rgb(233, 241, 218) 9%,
-                                rgb(184, 237, 124) 20%,
-                                rgb(64, 165, 106) 62%,
-                                rgb(43, 196, 145) 100%
-                            );
-                        }
-                        &::active {
-                            background: radial-gradient(
-                                circle farthest-corner at 40% 25%,
-                                rgb(229, 255, 181) 9%,
-                                rgb(204, 237, 124) 20%,
-                                rgb(103, 165, 64) 62%,
-                                rgb(66, 204, 40) 100%
-                            );
-                        }
-                        &::after {
-                            border: groove #460f0f 5px;
-                            content: "";
-                            width: 60px;
-                            height: 60px;
-                            position: absolute;
-                            border-radius: 50%;
-                            left: -10px;
-                            top: -10px;
-                            border-style: double;
-                            opacity: 0.75;
-                        }
+                    }
+                    &:active {
+                        background: radial-gradient(
+                            circle farthest-corner at 40% 25%,
+                            rgb(229, 255, 181) 9%,
+                            rgb(204, 237, 124) 20%,
+                            rgb(103, 165, 64) 62%,
+                            rgb(66, 204, 40) 100%
+                        );
+                        outline: none;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    &::after {
+                        border: groove #460f0f 5px;
+                        content: "";
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        border-radius: 50%;
+                        left: -6px;
+                        top: -6px;
+                        border-style: double;
+                        opacity: 0.75;
                     }
                 }
             }
