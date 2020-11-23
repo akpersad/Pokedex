@@ -1,7 +1,8 @@
 import axios from "axios";
 import store from "../config/store";
 
-const getNamesLink = "https://pokeapi.co/api/v2/pokemon?limit=151";
+export const pokemonNumber = 151;
+const getNamesLink = `https://pokeapi.co/api/v2/pokemon?limit=${pokemonNumber}`;
 export const getSpeciesInfo = "https://pokeapi.co/api/v2/pokemon-species/";
 export const pokeDataLink = "https://pokeapi.co/api/v2/pokemon/";
 
