@@ -339,3 +339,17 @@ body {
         }
     }
 }
+
+@media (max-width: 768px) {
+    .pokedex-container {
+        margin: 0;
+        .pokedex {
+            flex-wrap: wrap;
+            width: unset;
+            justify-content: center;
+            .divider {
+                display: none;
+            }
+        }
+    }
+}
